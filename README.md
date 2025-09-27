@@ -36,7 +36,7 @@ The pipeline follows a **Bronze → Silver → Gold + Realtime Serving** pattern
   - Periodic gold snapshot sampling → balanced, deduped, drift-checked dataset for model training.  
 
 - **Realtime Serving (Online features & scoring)**  
-  - Features in Redis/Feast (scalars) and Vector DB (Qdrant/pgvector).  
+  - Features in Redis (scalars) and Vector DB (pgvector).  
   - Inference service fetches features + embeddings, consumes posts, and publishes scored outputs to Kafka (`social.scored`).  
 
 ---
@@ -124,7 +124,7 @@ After running the controller, the pipeline will generate files at each stage. Yo
 - **Serving (scored posts):**  `serving/social.scored.jsonl` >> Posts enriched with toy sentiment labels (positive/negative/neutral). 
 - -**Gold Snapshot (for training):** `gold/training_snapshot_<date>.json` >> Immutable, balanced, deduplicated dataset sampled from Silver for model training.
 
-### 4.Schedule gold snapshot 
+### 4. Schedule gold snapshot 
 To automate daily **Gold snapshot** creation, schedule `gold_snapshot.py` using cron (Linux/macOS) or Task Scheduler (Windows).  
 
 Example cron job (runs every day at 02:00 server time):  
