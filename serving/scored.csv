@@ -1,6 +1,0 @@
-post_id,sentiment,prob_neg,prob_neu,prob_pos,model_version,scored_at
-p101,positive,0.1,0.1,0.8,sa-demo-v1,2025-09-27T06:48:30.064954
-p202,negative,0.8,0.1,0.1,sa-demo-v1,2025-09-27T06:48:30.065184
-p203,neutral,0.2,0.6,0.2,sa-demo-v1,2025-09-27T06:48:30.065192
-p204,positive,0.1,0.1,0.8,sa-demo-v1,2025-09-27T06:48:30.065201
-p205,negative,0.8,0.1,0.1,sa-demo-v1,2025-09-27T06:48:30.065207

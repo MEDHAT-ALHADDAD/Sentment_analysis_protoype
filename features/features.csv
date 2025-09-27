@@ -1,6 +1,0 @@
-post_id,lang,domain,hour_of_day,text_len,emoji_cnt,url_cnt
-p101,en,tech,12,60,1,1
-p202,ar,customer_service,13,78,0,0
-p203,en,customer_service,11,52,0,0
-p204,ar,tech,09,43,2,1
-p205,en,tech,12,43,0,0

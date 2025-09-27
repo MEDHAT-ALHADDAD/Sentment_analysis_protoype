@@ -1,4 +1,4 @@
-import argparse, csv, datetime
+import argparse, json, time, datetime
 from pathlib import Path
 
 
@@ -13,18 +13,27 @@ def simple_sentiment(text):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--clean", required=True)
-    ap.add_argument("--out", required=True)
+    ap.add_argument("--clean", default="silver/social.clean.jsonl")
+    ap.add_argument("--scored", default="serving/social.scored.jsonl")
+    ap.add_argument("--offset", default="serving/social.clean.jsonl")
+    ap.add_argument("--poll", type=float, default=2.0)
     args = ap.parse_args()
-    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
 
-    outrows = []
-    with open(args.clean, encoding="utf-8") as f:
-        r = csv.DictReader(f)
-        for row in r:
-            sent, pn, pneu, pp = simple_sentiment(row["clean_text"])
-            outrows.append(
-                {
+    offset_file = Path(args.offset + ".offset.scored")
+    last_offset = int(offset_file.read_text()) if offset_file.exists() else 0
+
+    while True:
+        lines = Path(args.clean).read_text(encoding="utf-8").splitlines()
+        new_lines = lines[last_offset:]
+        if not new_lines:
+            time.sleep(args.poll)
+            continue
+
+        with open(args.scored, "a", encoding="utf-8") as f_out:
+            for line in new_lines:
+                row = json.loads(line)
+                sent, pn, pneu, pp = simple_sentiment(row["clean_text"])
+                scored = {
                     "post_id": row["post_id"],
                     "sentiment": sent,
                     "prob_neg": pn,
@@ -33,12 +42,11 @@ def main():
                     "model_version": "sa-demo-v1",
                     "scored_at": datetime.datetime.utcnow().isoformat(),
                 }
-            )
-    with open(args.out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(outrows[0].keys()))
-        w.writeheader()
-        w.writerows(outrows)
-    print("Serving scored:", len(outrows))
+                f_out.write(json.dumps(scored) + "\n")
+                print("Scored:", row["post_id"])
+
+        last_offset += len(new_lines)
+        offset_file.write_text(str(last_offset))
 
 
 if __name__ == "__main__":

@@ -1,6 +1,0 @@
-post_id,source,domain,created_at,lang,clean_text,record_hash,pii_found,emoji_cnt,url_cnt,text_len
-p101,x,tech,2025-09-25T12:15:00Z,en,i love the new phone update! battery life is amazing 🚀 <url>,b05d25a50d27d8a7,0,1,1,60
-p202,ig,customer_service,2025-09-25T13:00:00Z,ar,كرهت خدمة العملاء اليوم، التجربة كانت سيئة جدا. تواصلوا معي: <phone>او <email>,30b33026c66eafde,1,0,0,78
-p203,fb,customer_service,2025-09-25T11:00:00Z,en,great service!!! thanks <user> contact me at <email>,70f46ff3985ccfb2,1,0,0,52
-p204,x,tech,2025-09-25T09:41:00Z,ar,تحديث الكاميرا ممتاز جدااااا 🔥🔥 رابط: <url>,e18ca0dcc59ccf40,0,2,1,43
-p205,x,tech,2025-09-25T12:25:00Z,en,battery life still poor after the update :(,1205b3712a9acebf,0,0,0,43
