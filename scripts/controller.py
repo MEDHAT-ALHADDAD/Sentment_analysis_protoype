@@ -65,6 +65,16 @@ def main():
             "gold/training_snapshot.csv",
         ]
     )
+    run(
+        [
+            sys.executable,
+            "scripts/serving_sim.py",
+            "--clean",
+            "silver/cleaned_posts.csv",
+            "--out",
+            "serving/scored.csv",
+        ]
+    )
 
 
 if __name__ == "__main__":
