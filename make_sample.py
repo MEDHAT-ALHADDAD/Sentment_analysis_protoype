@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+# Creates data/sample_posts.jsonl (5 mock posts: AR + EN)
+
+import json, pathlib
+
+p = pathlib.Path("data")
+p.mkdir(parents=True, exist_ok=True)
+rows = [
+    {
+        "post_id": "p101",
+        "text": "I love the new phone update! Battery life is amazing 🚀 https://x.com/rel",
+        "lang_hint": "en",
+        "author_id": "u77",
+        "created_at": "2025-09-25T12:15:00Z",
+        "source": "x",
+        "domain": "tech",
+    },
+    {
+        "post_id": "p202",
+        "text": "كرهت خدمة العملاء اليوم، التجربة كانت سيئة جدًا. تواصلوا معي: 055-123-4567 أو email@domain.com",
+        "lang_hint": "ar",
+        "author_id": "u88",
+        "created_at": "2025-09-25T13:00:00Z",
+        "source": "ig",
+        "domain": "customer_service",
+    },
+    {
+        "post_id": "p203",
+        "text": "Great service!!! thanks @support contact me at john.doe@mail.com",
+        "lang_hint": "en",
+        "author_id": "u15",
+        "created_at": "2025-09-25T11:00:00Z",
+        "source": "fb",
+        "domain": "customer_service",
+    },
+    {
+        "post_id": "p204",
+        "text": "تحديث الكاميرا ممتاز جدااااا 🔥🔥 رابط: www.example.com",
+        "lang_hint": "ar",
+        "author_id": "u91",
+        "created_at": "2025-09-25T09:41:00Z",
+        "source": "x",
+        "domain": "tech",
+    },
+    {
+        "post_id": "p205",
+        "text": "Battery life still poor after the update :(",
+        "lang_hint": "en",
+        "author_id": "u77",
+        "created_at": "2025-09-25T12:25:00Z",
+        "source": "x",
+        "domain": "tech",
+    },
+]
+with open("data/sample_posts.jsonl", "w", encoding="utf-8") as f:
+    for r in rows:
+        f.write(json.dumps(r, ensure_ascii=False) + "\n")
+print("Wrote data/sample_posts.jsonl")
