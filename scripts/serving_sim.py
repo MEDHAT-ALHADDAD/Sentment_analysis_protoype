@@ -1,7 +1,5 @@
-# scripts/serving_sim.py
 import argparse, json, time, datetime
 from pathlib import Path
-from metrics import incr, setval
 
 
 def simple_sentiment(text):
@@ -15,28 +13,27 @@ def simple_sentiment(text):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--clean_topic", default="topics/social.clean.jsonl")
-    ap.add_argument("--scored_topic", default="topics/social.scored.jsonl")
-    ap.add_argument("--poll", type=float, default=1.0)
+    ap.add_argument("--clean", default="silver/social.clean.jsonl")
+    ap.add_argument("--scored", default="serving/social.scored.jsonl")
+    ap.add_argument("--offset", default="serving/social.clean.jsonl")
+    ap.add_argument("--poll", type=float, default=2.0)
     args = ap.parse_args()
 
-    Path(args.scored_topic).parent.mkdir(parents=True, exist_ok=True)
-
-    offset_file = Path(args.clean_topic + ".offset.scored")
-    last = int(offset_file.read_text()) if offset_file.exists() else 0
+    offset_file = Path(args.offset + ".offset.scored")
+    last_offset = int(offset_file.read_text()) if offset_file.exists() else 0
 
     while True:
-        lines = Path(args.clean_topic).read_text(encoding="utf-8").splitlines()
-        new = lines[last:]
-        if not new:
+        lines = Path(args.clean).read_text(encoding="utf-8").splitlines()
+        new_lines = lines[last_offset:]
+        if not new_lines:
             time.sleep(args.poll)
             continue
 
-        with open(args.scored_topic, "a", encoding="utf-8") as f_out:
-            for line in new:
+        with open(args.scored, "a", encoding="utf-8") as f_out:
+            for line in new_lines:
                 row = json.loads(line)
                 sent, pn, pneu, pp = simple_sentiment(row["clean_text"])
-                msg = {
+                scored = {
                     "post_id": row["post_id"],
                     "sentiment": sent,
                     "prob_neg": pn,
@@ -45,13 +42,11 @@ def main():
                     "model_version": "sa-demo-v1",
                     "scored_at": datetime.datetime.utcnow().isoformat(),
                 }
-                f_out.write(json.dumps(msg) + "\n")
-                incr("serving", "scored", 1)
+                f_out.write(json.dumps(scored) + "\n")
                 print("Scored:", row["post_id"])
 
-        last += len(new)
-        offset_file.write_text(str(last))
-        setval("serving", "offset", last)
+        last_offset += len(new_lines)
+        offset_file.write_text(str(last_offset))
 
 
 if __name__ == "__main__":
