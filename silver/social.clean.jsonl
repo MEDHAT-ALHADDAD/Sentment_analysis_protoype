@@ -1,13 +1,32 @@
-{"post_id": "p101", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:15:00Z", "lang": "en", "clean_text": "i love the new phone update! battery life is amazing 🚀 <url>", "record_hash": "b05d25a50d27d8a7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 60}
-{"post_id": "p202", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T13:00:00Z", "lang": "ar", "clean_text": "كرهت خدمة العملاء اليوم، التجربة كانت سيئة جدا. تواصلوا معي: <phone>او <email>", "record_hash": "30b33026c66eafde", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 78}
-{"post_id": "p203", "source": "fb", "domain": "customer_service", "created_at": "2025-09-25T11:00:00Z", "lang": "en", "clean_text": "great service!!! thanks <user> contact me at <email>", "record_hash": "70f46ff3985ccfb2", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 52}
-{"post_id": "p204", "source": "x", "domain": "tech", "created_at": "2025-09-25T09:41:00Z", "lang": "ar", "clean_text": "تحديث الكاميرا ممتاز جدااااا 🔥🔥 رابط: <url>", "record_hash": "e18ca0dcc59ccf40", "pii_found": 0, "emoji_cnt": 2, "url_cnt": 1, "text_len": 43}
-{"post_id": "p205", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:25:00Z", "lang": "en", "clean_text": "battery life still poor after the update :(", "record_hash": "1205b3712a9acebf", "pii_found": 0, "emoji_cnt": 0, "url_cnt": 0, "text_len": 43}
-{"post_id": "p101", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:15:00Z", "lang": "en", "clean_text": "i love the new phone update! battery life is amazing 🚀 <url>", "record_hash": "b05d25a50d27d8a7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 60}
-{"post_id": "p202", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T13:00:00Z", "lang": "ar", "clean_text": "كرهت خدمة العملاء اليوم، التجربة كانت سيئة جدا. تواصلوا معي: <phone>او <email>", "record_hash": "30b33026c66eafde", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 78}
-{"post_id": "p203", "source": "fb", "domain": "customer_service", "created_at": "2025-09-25T11:00:00Z", "lang": "en", "clean_text": "great service!!! thanks <user> contact me at <email>", "record_hash": "70f46ff3985ccfb2", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 52}
-{"post_id": "p204", "source": "x", "domain": "tech", "created_at": "2025-09-25T09:41:00Z", "lang": "ar", "clean_text": "تحديث الكاميرا ممتاز جدااااا 🔥🔥 رابط: <url>", "record_hash": "e18ca0dcc59ccf40", "pii_found": 0, "emoji_cnt": 2, "url_cnt": 1, "text_len": 43}
-{"post_id": "p205", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:25:00Z", "lang": "en", "clean_text": "battery life still poor after the update :(", "record_hash": "1205b3712a9acebf", "pii_found": 0, "emoji_cnt": 0, "url_cnt": 0, "text_len": 43}
-{"post_id": "p206", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T14:30:00Z", "lang": "en", "clean_text": "just had an amazing experience with customer support! resolved my issue quickly. 👍", "record_hash": "d58a7d5a88694c4e", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 0, "text_len": 82}
-{"post_id": "p207", "source": "fb", "domain": "tech", "created_at": "2025-09-25T15:00:00Z", "lang": "ar", "clean_text": "التحديث الجديد سيء للغاية، البطارية تفرغ بسرعة. 😡 رابط: <url>", "record_hash": "6de123198e794d5b", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 61}
-{"post_id": "p208", "source": "x", "domain": "tech", "created_at": "2025-09-25T16:00:00Z", "lang": "en", "clean_text": "loving the camera improvements in the latest update! 📸 #photography", "record_hash": "c98e9a4ccba7a6e7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 0, "text_len": 67}
+{"post_id": "p101", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:15:00Z", "lang": "en", "clean_text": "i love the new phone update! battery life is amazing 🚀 <url>", 
+                "record_hash": "b05d25a50d27d8a7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 60}
+{"post_id": "p202", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T13:00:00Z", "lang": "ar", "clean_text": "كرهت خدمة العملاء اليوم، التجربة كانت سيئة جدا. تواصلوا معي: <phone>او <email>", 
+                "record_hash": "30b33026c66eafde", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 78}
+{"post_id": "p203", "source": "fb", "domain": "customer_service", "created_at": "2025-09-25T11:00:00Z", "lang": "en", "clean_text": "great service!!! thanks <user> contact me at <email>", 
+                "record_hash": "70f46ff3985ccfb2", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 52}
+{"post_id": "p204", "source": "x", "domain": "tech", "created_at": "2025-09-25T09:41:00Z", "lang": "ar", "clean_text": "تحديث الكاميرا ممتاز جدااااا 🔥🔥 رابط: <url>", 
+                "record_hash": "e18ca0dcc59ccf40", "pii_found": 0, "emoji_cnt": 2, "url_cnt": 1, "text_len": 43}
+{"post_id": "p205", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:25:00Z", "lang": "en", "clean_text": "battery life still poor after the update :(", 
+                "record_hash": "1205b3712a9acebf", "pii_found": 0, "emoji_cnt": 0, "url_cnt": 0, "text_len": 43}
+{"post_id": "p206", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T14:30:00Z", "lang": "en", "clean_text": "just had an amazing experience with customer support! resolved my issue quickly. 👍", 
+                "record_hash": "d58a7d5a88694c4e", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 0, "text_len": 82}
+{"post_id": "p207", "source": "fb", "domain": "tech", "created_at": "2025-09-25T15:00:00Z", "lang": "ar", "clean_text": "التحديث الجديد سيء للغاية، البطارية تفرغ بسرعة. 😡 رابط: <url>", 
+                "record_hash": "6de123198e794d5b", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 61}
+{"post_id": "p208", "source": "x", "domain": "tech", "created_at": "2025-09-25T16:00:00Z", "lang": "en", "clean_text": "loving the camera improvements in the latest update! 📸 #photography", 
+                "record_hash": "c98e9a4ccba7a6e7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 0, "text_len": 67}
+{"post_id": "p101", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:15:00Z", "lang": "en", "clean_text": "i love the new phone update! battery life is amazing 🚀 <url>", 
+                "record_hash": "b05d25a50d27d8a7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 60}
+{"post_id": "p202", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T13:00:00Z", "lang": "ar", "clean_text": "كرهت خدمة العملاء اليوم، التجربة كانت سيئة جدا. تواصلوا معي: <phone>او <email>", 
+                "record_hash": "30b33026c66eafde", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 78}
+{"post_id": "p203", "source": "fb", "domain": "customer_service", "created_at": "2025-09-25T11:00:00Z", "lang": "en", "clean_text": "great service!!! thanks <user> contact me at <email>", 
+                "record_hash": "70f46ff3985ccfb2", "pii_found": 1, "emoji_cnt": 0, "url_cnt": 0, "text_len": 52}
+{"post_id": "p204", "source": "x", "domain": "tech", "created_at": "2025-09-25T09:41:00Z", "lang": "ar", "clean_text": "تحديث الكاميرا ممتاز جدااااا 🔥🔥 رابط: <url>", 
+                "record_hash": "e18ca0dcc59ccf40", "pii_found": 0, "emoji_cnt": 2, "url_cnt": 1, "text_len": 43}
+{"post_id": "p205", "source": "x", "domain": "tech", "created_at": "2025-09-25T12:25:00Z", "lang": "en", "clean_text": "battery life still poor after the update :(", 
+                "record_hash": "1205b3712a9acebf", "pii_found": 0, "emoji_cnt": 0, "url_cnt": 0, "text_len": 43}
+{"post_id": "p206", "source": "ig", "domain": "customer_service", "created_at": "2025-09-25T14:30:00Z", "lang": "en", "clean_text": "just had an amazing experience with customer support! resolved my issue quickly. 👍", 
+                "record_hash": "d58a7d5a88694c4e", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 0, "text_len": 82}
+{"post_id": "p207", "source": "fb", "domain": "tech", "created_at": "2025-09-25T15:00:00Z", "lang": "ar", "clean_text": "التحديث الجديد سيء للغاية، البطارية تفرغ بسرعة. 😡 رابط: <url>", 
+                "record_hash": "6de123198e794d5b", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 1, "text_len": 61}
+{"post_id": "p208", "source": "x", "domain": "tech", "created_at": "2025-09-25T16:00:00Z", "lang": "en", "clean_text": "loving the camera improvements in the latest update! 📸 #photography", 
+                "record_hash": "c98e9a4ccba7a6e7", "pii_found": 0, "emoji_cnt": 1, "url_cnt": 0, "text_len": 67}
