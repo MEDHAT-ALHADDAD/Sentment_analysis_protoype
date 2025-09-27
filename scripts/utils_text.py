@@ -54,3 +54,7 @@ def hashing_vector(tokens, dim=64):
         v[h % dim] += 1
     norm = math.sqrt(sum(x * x for x in v)) or 1.0
     return [round(x / norm, 6) for x in v]
+
+
+def cosine(v1, v2):
+    return sum(a * b for a, b in zip(v1, v2))
